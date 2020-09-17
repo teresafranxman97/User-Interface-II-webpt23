@@ -133,6 +133,102 @@ table {
 * {
   box-sizing: border-box;
 }
+
+/* INDEX CSS STARTS HERE */
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Palatino, URW Palladio L, serif;
+}
+h1 {
+  font-size: 2vw;
+  text-transform: uppercase;
+  margin: 0;
+}
+h1:hover {
+  color: #c29276;
+}
+.backgroundImg {
+  background-image: url("../forest1574427411592-8ae18399cf34.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  filter: blur(5px);
+}
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 45%;
+  padding: 40px 0;
+  text-align: center;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-weight: bold;
+  border: 10px inset #fff;
+}
+.background-text p {
+  padding: 0 8%;
+  font-family: Palatino, URW Palladio L, serif;
+  font-size: 1.25vw;
+  margin: 1vw;
+}
+.background-text p:hover {
+  color: #ad8b78;
+}
+.background-text a {
+  display: inline-block;
+  padding: 10px 50px;
+  border: 2px solid #fff;
+  font-size: 0.5vw;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 15px;
+}
+.background-text a:hover {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 1180px) {
+  .background-text a {
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background-color: #c29276;
+    color: whitesmoke;
+  }
+
+  .background-text p {
+    margin-top: 1vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .background-text a {
+    background-color: #ad8b78;
+    color: whitesmoke;
+  }
+
+  @media screen and (max-width: 500px) {
+    .background-text a {
+      background-color: #c7b5ab;
+      color: black;
+    }
+  }
+}
+
+/* ABOUT ME CSS STARTS HERE */
+
 html {
   font-size: 62.5%;
 }
@@ -178,7 +274,8 @@ body {
 }
 .topNav a:hover {
   background-color: whitesmoke;
-  color: black;
+  color: #7d43b0;
+  border: 2px solid #7d43b0;
 }
 a {
   font-family: cursive;
@@ -197,7 +294,7 @@ a {
 
 h3 {
   font: italic 1.2em "Fira Sans", serif;
-  color: black;
+  color: #7d43b0;
   font-size: 3rem;
   text-align: center;
   padding: 1em;
@@ -221,7 +318,7 @@ h3 {
 }
 
 .midDiv {
-  padding-top: 15%;
+  padding-top: 9vw;
   padding-left: 40%;
   padding-right: 20%;
   text-align: right;
@@ -229,12 +326,23 @@ h3 {
 .midNav {
   text-align: left;
 }
+.midNav a {
+  color: #7d43b0;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.midNav a:hover {
+  background-color: #7d43b0;
+  color: whitesmoke;
+  border: 2px solid white;
+}
 
 .midDiv h2 {
   text-align: left;
   margin-bottom: 3%;
   font: italic 1.2em "Fira Sans", serif;
-  color: whitesmoke;
+  color: #7d43b0;
   font-size: 35px;
 }
 
@@ -255,7 +363,8 @@ h3 {
 .bottomDiv p {
   margin-left: 3.5em;
   font-size: 2em;
-  color: #8100ce;
+  color: #7d43b0;
+  font-weight: bold;
 }
 footer {
   background: rgb(255, 248, 252);
@@ -272,55 +381,32 @@ footer {
 .footerNav a {
   border: 1px solid black;
 }
-
-/* ABOUT ME CSS STARTS HERE */
-
-body,
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: Palatino, URW Palladio L, serif;
+@media screen and (max-width: 1690px) {
+  .bottomSection {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+  .midSection img {
+    margin-top: 3vw;
+  }
+  .midDiv {
+    margin-left: 10vw;
+  }
+  .midNav {
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+  }
 }
-h1 {
-  font-size: 3.5em;
-  text-transform: uppercase;
-  margin: 0;
-}
-.backgroundImg {
-  background-image: url("../forest1574427411592-8ae18399cf34.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 100%;
-  filter: blur(5px);
-}
-.background-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  width: 45%;
-  padding: 40px 0;
-  text-align: center;
-  border-top-left-radius: 70px;
-  border-bottom-right-radius: 70px;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  font-weight: bold;
-  border: 10px inset #fff;
-}
-.background-text p {
-  padding: 0 8%;
-  font-family: Palatino, URW Palladio L, serif;
-}
-.background-text a {
-  display: inline-block;
-  padding: 10px 50px;
-  border: 2px solid #fff;
-  font-size: 1em;
-  text-decoration: none;
-  color: #fff;
-  margin-top: 15px;
+@media screen and (max-width: 1366px) {
+  .midDiv {
+    margin-left: 10vw;
+    margin-right: 1vw;
+    margin-top: 0.25vw;
+  }
+  .midSection img {
+    margin-top: 5vw;
+  }
 }
