@@ -130,51 +130,74 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+* {
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
 }
 body {
-  background-color: #292b2b;
+  background: rgb(255, 248, 252);
+  background: radial-gradient(
+    circle,
+    rgba(255, 248, 252, 1) 0%,
+    rgba(40, 36, 36, 1) 78%
+  );
 }
 .heading {
-  background-color: #292b2b;
+  background: #ffffff;
   text-align: center;
   padding: 0.5em;
   font-size: 2rem;
-  color: whitesmoke;
+  color: black;
 }
 .container {
-  background: linear-gradient(to right, #ccccff 0%, #6600cc 100%);
-  padding: 3em;
+  background: rgb(255, 244, 244);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 244, 244, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 19%,
+    rgba(0, 0, 0, 0.6334908963585435) 81%
+  );
+  padding: 1em;
+}
+.topNav a {
+  font-family: cursive;
+  text-decoration: none;
+  border: 1px solid whitesmoke;
+  padding: 0.75em;
+  font-size: 15px;
+  color: whitesmoke;
 }
 .topNav {
+  font-size: 3rem;
   display: flex;
   flex-wrap: nowrap;
-  font-size: 3rem;
+  margin-top: 0.5em;
+}
+.topNav a:hover {
+  background-color: whitesmoke;
+  color: black;
 }
 a {
-  font: italic 1.2em "Fira Sans", serif;
+  font-family: cursive;
   text-decoration: none;
   border: 1px solid whitesmoke;
   padding: 0.5em;
   font-size: 15px;
-  color: whitesmoke;
+  color: black;
 }
-h1 {
-  font-size: 5rem;
+.container h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 6rem;
   color: whitesmoke;
-}
-h2 {
-  font: italic 1.2em "Fira Sans", serif;
-  color: whitesmoke;
-  font-size: 3rem;
   text-align: left;
-  margin: 2rem;
-  padding: 1rem;
 }
+
 h3 {
   font: italic 1.2em "Fira Sans", serif;
-  color: whitesmoke;
+  color: black;
   font-size: 3rem;
   text-align: center;
   padding: 1em;
@@ -182,21 +205,37 @@ h3 {
 
 .midSection {
   display: inline-block;
+  margin: 2%;
 }
 .midImg {
   float: left;
-  padding: 0.5em;
-  margin: 1rem;
+  width: 600px;
+  height: 600px;
 }
 .midSection p {
-  font: italic 1.2em "Fira Sans", serif;
-  font-size: 3.4rem;
+  font: italic "Fira Sans", serif;
+  font-size: 25px;
+  color: black;
+  margin-top: 3%;
   text-align: left;
-  color: whitesmoke;
 }
 
 .midDiv {
-  padding-left: 5%;
+  padding-top: 15%;
+  padding-left: 40%;
+  padding-right: 20%;
+  text-align: right;
+}
+.midNav {
+  text-align: left;
+}
+
+.midDiv h2 {
+  text-align: left;
+  margin-bottom: 3%;
+  font: italic 1.2em "Fira Sans", serif;
+  color: whitesmoke;
+  font-size: 35px;
 }
 
 .bottomSection {
@@ -216,12 +255,72 @@ h3 {
 .bottomDiv p {
   margin-left: 3.5em;
   font-size: 2em;
+  color: #8100ce;
 }
 footer {
-  background: linear-gradient(to right, #ccccff 0%, #6600cc 100%);
-  padding: 1em;
+  background: rgb(255, 248, 252);
+  background: radial-gradient(
+    circle,
+    rgba(255, 248, 252, 1) 0%,
+    rgba(255, 243, 243, 1) 45%
+  );
+  padding-bottom: 1%;
 }
 .footerNav {
   text-align: center;
-  margin-bottom: 1em;
+}
+.footerNav a {
+  border: 1px solid black;
+}
+
+/* ABOUT ME CSS STARTS HERE */
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Palatino, URW Palladio L, serif;
+}
+h1 {
+  font-size: 3.5em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.backgroundImg {
+  background-image: url("../forest1574427411592-8ae18399cf34.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  filter: blur(5px);
+}
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 45%;
+  padding: 40px 0;
+  text-align: center;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-weight: bold;
+  border: 10px inset #fff;
+}
+.background-text p {
+  padding: 0 8%;
+  font-family: Palatino, URW Palladio L, serif;
+}
+.background-text a {
+  display: inline-block;
+  padding: 10px 50px;
+  border: 2px solid #fff;
+  font-size: 1em;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 15px;
 }
